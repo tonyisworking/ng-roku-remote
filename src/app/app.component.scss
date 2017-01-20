@@ -1,0 +1,48 @@
+$bg-remote:  #490a3d;
+$border: #bd1550;
+$switch: #fff;
+$on: $border;
+$off: #8a9b0f;
+@keyframes pulse {
+  0% {
+    color: $on;
+  }
+
+  50% {
+    color: $off;
+  }
+
+  100% {
+    color: $on;
+  }
+}
+
+.remote {
+  background: $bg-remote;
+  border: 1px solid $border;
+  height: 450px;
+  margin-left: 1px;
+  margin-top: 1px;
+  padding: 1rem;
+  width: 230px;
+}
+
+.row {
+  margin-bottom: .75rem;
+  margin-top: .75rem;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.switch {
+  color: $switch;
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+
+  &.activity {
+    animation: pulse 1s infinite;
+  }
+}
