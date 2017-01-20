@@ -24,6 +24,7 @@ $off: #8a9b0f;
   margin-left: 1px;
   margin-top: 1px;
   padding: 1rem;
+  position: relative;
   width: 230px;
 }
 
@@ -45,4 +46,17 @@ $off: #8a9b0f;
   &.activity {
     animation: pulse 1s infinite;
   }
+}
+
+.network {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 99999;
+}
+
+.network-link {
+  background: $switch;
+  border-radius: 100%;
+  padding: 5px;
 }

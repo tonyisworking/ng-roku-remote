@@ -17,20 +17,29 @@ export class AppComponent implements AfterViewInit {
 
   };
   keyPress: boolean = false;
+  address: string;
 
   constructor(
     private roku: RokuService
-  ) {
-  }
+  ) { }
+
 
   ngAfterViewInit() {
     document.getElementById('preloader').style['display'] = 'none';
+    this.address = localStorage.getItem('address');
+  }
+
+  setIp() {
+    let address = 'http://' + prompt('Please enter your Roku\'s IP Address:', '192.168.0.110').trim() + ':8060/keypress/';
+
+    this.address = address;
+    localStorage.setItem('address', this.address);
   }
 
   press(key: string) {
     if (this.allowedKeys.hasOwnProperty(key)) {
       this.keyPress = true;
-      this.roku.sendCommand(this.allowedKeys[key]).subscribe();
+      this.roku.sendCommand(this.address, this.allowedKeys[key]).subscribe();
       setTimeout(() => {
         this.keyPress = false;
       }, 250);

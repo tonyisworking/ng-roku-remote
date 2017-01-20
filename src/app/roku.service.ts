@@ -10,13 +10,14 @@ export class RokuService {
   constructor(
     private http: Http
   ) {
-    this.address = 'http://192.168.0.110:8060/keypress/';
   }
-  sendCommand(key) {
+  sendCommand(location, key) {
 
     return this.http
-      .post(`${this.address}${key}`,
+      .post(`${location}${key}`,
       '', []
       );
   }
+
+
 }
