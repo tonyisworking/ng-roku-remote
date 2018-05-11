@@ -1,62 +1,44 @@
-$bg-remote:  #490a3d;
-$border: #bd1550;
-$switch: #fff;
-$on: $border;
-$off: #8a9b0f;
-@keyframes pulse {
-  0% {
-    color: $on;
-  }
-
-  50% {
-    color: $off;
-  }
-
-  100% {
-    color: $on;
-  }
+#phone {
+  width: 360px;
+  height: 640px;
+  background:white;
+  display:flex;
+  flex-direction:row;
 }
 
-.remote {
-  background: $bg-remote;
-  border: 1px solid $border;
-  height: 450px;
-  margin-left: 1px;
-  margin-top: 1px;
-  padding: 1rem;
-  position: relative;
-  width: 230px;
+#remote {
+  display:flex;
+  flex-direction:column;
+  width:80%;
 }
 
-.row {
-  margin-bottom: .75rem;
-  margin-top: .75rem;
+#dock {
+  width:20%;
+  background:lightgray;
+  border-left:2px solid darkslategray;
 }
 
-.btn {
-  cursor: pointer;
+#logo {
+  width: 100%;
+  padding-top:30%;
+  padding-bottom:30%;
 }
 
-.switch {
-  color: $switch;
-  left: 1rem;
-  position: absolute;
-  top: 1rem;
-
-  &.activity {
-    animation: pulse 1s infinite;
-  }
+#controller-area {
+  width:180px;
+  height:180px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:column;
 }
 
-.network {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 99999;
+button {
+  width:60px;
+  height:60px;
+  background:none;
+  border-radius:5px;
 }
 
-.network-link {
-  background: $switch;
-  border-radius: 100%;
-  padding: 5px;
+#button--up {
+  margin-left:60px;
 }

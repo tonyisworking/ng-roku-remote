@@ -1,4 +1,30 @@
-<div class="remote justify-align-center text-center">
+<div id="phone">
+  <div id = "remote">
+      <img src = "assets/Koru_Logo.png" id = "logo" />
+      <div id = "controller-area">
+          <div class = "row">
+            <button (click)="press('up')" id="button--up">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class = "row">
+            <button (click)="press('left')" >
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button (click)="press('ok')" id = "button-ok">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class = "row">
+
+          </div>
+      </div>
+  </div>
+  <div id = "dock">
+
+  </div>
+</div>
+  <!--
   <div class="switch" [ngClass]="{ activity : keyPress }">
     <i class="fa fa-circle" aria-hidden="true"></i>
   </div>
@@ -16,11 +42,11 @@
   </div>
   <div class="row">
     <div class="col">
-      <button (click)="press('back')" class="btn btn-primary">
-        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-      </button>
       <button (click)="press('home')" class="btn btn-primary">
         <i class="fa fa-home" aria-hidden="true"></i>
+      </button>
+      <button (click)="press('back')" class="btn btn-primary">
+        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
       </button>
     </div>
   </div>
@@ -34,12 +60,8 @@
   <div class="row">
     <div class="col">
 
-      <button (click)="press('left')" class="btn btn-primary">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-      </button>
-      <button (click)="press('ok')" class="btn btn-primary">
-        <i class="fa fa-check" aria-hidden="true"></i>
-      </button>
+
+
       <button (click)="press('right')" class="btn btn-primary">
         <i class="fa fa-arrow-right" aria-hidden="true"></i>
       </button>
@@ -93,4 +115,4 @@
       </button>
     </div>
   </div>
-</div>
+-->
