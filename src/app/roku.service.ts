@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Rx';
 export class RokuService {
 
   address: string;
-
   constructor(
     private http: Http
   ) {
@@ -14,9 +13,7 @@ export class RokuService {
   sendCommand(location, key) {
 
     return this.http
-      .post(`${location}${key}`,
-      '', []
-      );
+      .post(`${location}${key}`,'');
   }
 
 
